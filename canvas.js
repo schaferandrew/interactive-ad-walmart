@@ -241,14 +241,6 @@ function animate() {
     shelfOne.draw();
     shelfTwo.draw();
     shelfThree.draw();
-    banner.draw();
-    walmartLogo.draw();
-
-    //Draw Text
-    c.font = "4em Arial";
-    c.fillStyle = "white";
-    c.fillText("Double Box Tops at ", .05 * canvas.width, canvas.height * .075);
-    c.fillText("Total earnings: $" + Number(earnings).toFixed(2), .05 * canvas.width, canvas.height * .15);
 
     //Add 9 options for boxes
     AnniesBox.draw();
@@ -280,6 +272,14 @@ function animate() {
         cta.x = innerWidth / 2;
     }
     cta.draw();
+    banner.draw();
+    walmartLogo.draw();
+
+    //Draw Text
+    c.font = "4em Arial";
+    c.fillStyle = "white";
+    c.fillText("Double Box Tops at ", .05 * canvas.width, canvas.height * .075);
+    c.fillText("Total earnings: $" + Number(earnings).toFixed(2), .05 * canvas.width, canvas.height * .15);
     timer++;
 }
 
@@ -317,22 +317,22 @@ var brands = ["anniesProp.png","Cheerios.png","Nature Valley.png","CTC.png"];
 brandIndex = 0;
 
 //Add 6 options for boxes
-var AnniesBox = new CanvasImage(position_0.x, position_0.y, brands[brandIndex], innerWidth * .3, innerWidth * .45, true);
-var GenBox1 = new CanvasImage(position_1.x, position_1.y, "Generic_2.png", innerWidth * .25, innerWidth * .45, false);
-var GenBox2 = new CanvasImage(position_2.x, position_2.y, "Generic_1.png", innerWidth * .25, innerWidth * .45, false);
-var GenBox3 = new CanvasImage(position_3.x, position_3.y, "Generic_2.png", innerWidth * .25, innerWidth * .45, false);
-var GenBox4 = new CanvasImage(position_4.x, position_4.y, "Generic_2.png", innerWidth * .3, innerWidth * .45, false);
-var GenBox5 = new CanvasImage(position_5.x, position_5.y, "Generic_1.png", innerWidth * .35, innerWidth * .40, false);
+var AnniesBox = new CanvasImage(position_0.x, position_0.y, brands[brandIndex], innerWidth * .25, innerWidth * .35, true);
+var GenBox1 = new CanvasImage(position_1.x, position_1.y, "Generic_2.png", innerWidth * .20, innerWidth * .35, false);
+var GenBox2 = new CanvasImage(position_2.x, position_2.y, "Generic_1.png", innerWidth * .20, innerWidth * .35, false);
+var GenBox3 = new CanvasImage(position_3.x, position_3.y, "Generic_2.png", innerWidth * .20, innerWidth * .35, false);
+var GenBox4 = new CanvasImage(position_4.x, position_4.y, "Generic_2.png", innerWidth * .25, innerWidth * .35, false);
+var GenBox5 = new CanvasImage(position_5.x, position_5.y, "Generic_1.png", innerWidth * .30, innerWidth * .30, false);
 
-var SuccessBox = new CanvasImage(innerWidth / 2, innerHeight + innerWidth*.8, "Checkmark.png", innerWidth * .7, innerWidth * .6,false);
-var FailureBox = new CanvasImage(innerWidth / 2, innerHeight + innerWidth*.8, "xBox.png",innerWidth * .7, innerWidth * .6,false);
+var SuccessBox = new CanvasImage(innerWidth / 2, innerHeight + innerWidth*.8, "Checkmark.png", innerWidth * .45, innerWidth * .4,false);
+var FailureBox = new CanvasImage(innerWidth / 2, innerHeight + innerWidth*.8, "xBox.png",innerWidth * .45, innerWidth * .4,false);
 
 
 
 var foodShelf = [AnniesBox, GenBox5, GenBox1, GenBox2, GenBox3, GenBox4];
 
 //End
-var cta = new CanvasImage(innerWidth * 4, .63 * innerHeight, "cta.png", innerHeight * 1.2, innerHeight * 1.2);
+var cta = new CanvasImage(innerWidth * 4, .7 * innerHeight, "cta.png", innerHeight * 1.1, innerHeight * 1.1);
 
 
 
