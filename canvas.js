@@ -130,7 +130,7 @@ function CanvasImage(x, y, source, width, height, btfe) {
         this.y += 15 * this.speed;
         if (this.y < canvas.height * .7) {
             this.speed *= -1;
-            if(this.img.src.includes("20cents.png")){
+            if(this.img.src.includes("2xBT.png")){
                 restock();
             } else {
                 console.log("Not counted as Checkmark");
@@ -168,7 +168,7 @@ function CanvasImage(x, y, source, width, height, btfe) {
                 }
                 SuccessBox.speed = - 2;
                 //raise walmart count
-                earnings += .20;
+                earnings += 2;
             } else {
                 FailureBox.speed = -2;
             }
@@ -279,7 +279,7 @@ function animate() {
     c.font = "4em Arial";
     c.fillStyle = "white";
     c.fillText("Double Box Tops at ", .05 * canvas.width, canvas.height * .075);
-    c.fillText("Total earnings: $" + Number(earnings).toFixed(2), .05 * canvas.width, canvas.height * .15);
+    c.fillText("Total Box Tops: " + Number(earnings).toFixed(0), .25 * canvas.width, canvas.height * .15);
     timer++;
 }
 
@@ -324,7 +324,7 @@ var GenBox3 = new CanvasImage(position_3.x, position_3.y, "Generic_2.png", inner
 var GenBox4 = new CanvasImage(position_4.x, position_4.y, "Generic_2.png", innerWidth * .25, innerWidth * .35, false);
 var GenBox5 = new CanvasImage(position_5.x, position_5.y, "Generic_1.png", innerWidth * .30, innerWidth * .30, false);
 
-var SuccessBox = new CanvasImage(innerWidth / 2, innerHeight + innerWidth*.8, "20cents.png", innerWidth * .45, innerWidth * .4,false);
+var SuccessBox = new CanvasImage(innerWidth / 2, innerHeight + innerWidth*.8, "2xBT.png", innerWidth * .45, innerWidth * .4,false);
 var FailureBox = new CanvasImage(innerWidth / 2, innerHeight + innerWidth*.8, "xBox.png",innerWidth * .45, innerWidth * .4,false);
 
 
